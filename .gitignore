@@ -1,0 +1,60 @@
+# Unity generated folders (rebuilt by the Editor)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Build output
+/[Bb]uild/
+/[Bb]uilds/
+/[Bb]uild[Ss]ettings/
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Unity generated assets
+/Assets/AssetStoreTools*
+/[Aa]ssets/[Ss]treamingAssets/aa/
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+crashlytics-build.properties
+sysinfo.txt
+
+# IDE and generated project files (rebuilt by the Editor)
+/.idea/
+/.vs/
+/.vscode/
+/.gradle/
+*.csproj
+*.sln
+*.slnx
+*.unityproj
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Signing keys and local secrets
+*.keystore
+*.jks
+*.p12
+*.mobileprovision
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
