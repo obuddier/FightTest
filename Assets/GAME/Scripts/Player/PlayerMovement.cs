@@ -8,6 +8,7 @@ namespace GAME.Scripts.Player
         [Header("Movement Settings")]
         [SerializeField] private float moveSpeed = 5f;
         [SerializeField] private float jumpForce = 10f;
+        [SerializeField] private float fallGravityScale = 3f;
 
         [Header("Ground Check")]
         [SerializeField] private Transform groundCheck;
@@ -16,15 +17,18 @@ namespace GAME.Scripts.Player
 
         private Rigidbody2D _rigidbody;
         private float _moveInput;
+        private float _defaultGravityScale;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+            _defaultGravityScale = _rigidbody.gravityScale;
         }
 
         private void FixedUpdate()
         {
             _rigidbody.linearVelocityX = _moveInput * moveSpeed;
+            _rigidbody.gravityScale = _rigidbody.linearVelocityY < 0f ? fallGravityScale : _defaultGravityScale;
         }
 
         public void SetMoveInput(float direction)
