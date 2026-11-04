@@ -8,6 +8,7 @@ namespace GAME.Scripts.Enemy
         [Header("Attack Settings")]
         [SerializeField] private float damage = 10f;
         [SerializeField] private float attackRadius = 0.25f;
+        [SerializeField] private float attackCooldown = 1f;
         [SerializeField] private float indicatorDuration = 0.2f;
         [SerializeField] private LayerMask targetLayer;
 
@@ -18,6 +19,7 @@ namespace GAME.Scripts.Enemy
         private readonly Collider2D[] _hits = new Collider2D[2];
         private ContactFilter2D _targetFilter;
         private Coroutine _indicatorRoutine;
+        private float _nextAttackTime;
 
         private void Awake()
         {
@@ -29,6 +31,10 @@ namespace GAME.Scripts.Enemy
 
         public void Attack()
         {
+            if (Time.time < _nextAttackTime) return;
+
+            _nextAttackTime = Time.time + attackCooldown;
+
             DamageTarget();
 
             if (_indicatorRoutine != null)
