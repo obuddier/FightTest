@@ -19,7 +19,6 @@ namespace GAME.Scripts.Enemy
 
         private void Update()
         {
-            // The player object is destroyed on death.
             if (player == null) return;
 
             _movement.FaceTowards(player.position);
