@@ -15,7 +15,6 @@ namespace GAME.Scripts.Enemy
         [Header("Object References")]
         [SerializeField] private GameObject attackIndicator;
 
-        // Our own hurtbox can fill one slot, so a single result could hide the opponent.
         private readonly Collider2D[] _hits = new Collider2D[2];
         private ContactFilter2D _targetFilter;
         private Coroutine _indicatorRoutine;
