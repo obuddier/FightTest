@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 581208419}
   - component: {fileID: 581208418}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: EnemyHealthTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,8 +322,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4288270829
+  m_fontColor: {r: 0.92941177, g: 0.81960785, b: 0.6, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 1008478337}
   - component: {fileID: 1008478336}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PlayerHealthTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -634,8 +634,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4288270829
+  m_fontColor: {r: 0.92941177, g: 0.81960785, b: 0.6, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1052,6 +1052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GAME.Scripts.Player.PlayerMovement
   moveSpeed: 5
   jumpForce: 8.3
+  fallGravityScale: 3
   groundCheck: {fileID: 1308410756}
   groundCheckRadius: 0.1
   groundLayer:
@@ -1890,7 +1891,7 @@ GameObject:
   - component: {fileID: 1872061912}
   - component: {fileID: 1872061914}
   m_Layer: 3
-  m_Name: Square
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2365,6 +2366,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1872061913}
-  - {fileID: 1019041980}
   - {fileID: 1370768431}
+  - {fileID: 1019041980}
   - {fileID: 1600000101}
