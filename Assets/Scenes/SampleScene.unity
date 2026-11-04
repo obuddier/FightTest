@@ -831,7 +831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GAME.Scripts.Enemy.EnemyAttack
   damage: 10
   attackRadius: 0.25
-  attackCooldown: 1
+  attackCooldown: 0.5
   indicatorDuration: 0.2
   targetLayer:
     serializedVersion: 2
