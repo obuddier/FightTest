@@ -419,7 +419,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0, g: 0.06983614, b: 1, a: 1}
@@ -541,8 +541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ce0087be3948a4fa454bb5cda8abe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GAME.Scripts.Enemy.EnemyBehaviour
-  attackInterval: 1
-  flipInterval: 2
+  attackRange: 1.5
+  player: {fileID: 1370768431}
 --- !u!114 &1019041982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,6 +557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GAME.Scripts.Enemy.EnemyAttack
   damage: 10
   attackRadius: 0.25
+  attackCooldown: 1
   indicatorDuration: 0.2
   targetLayer:
     serializedVersion: 2
@@ -1357,7 +1358,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.5471698, g: 0, b: 0.015020379, a: 1}
