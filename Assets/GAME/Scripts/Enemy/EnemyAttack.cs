@@ -6,7 +6,7 @@ namespace GAME.Scripts.Enemy
     public class EnemyAttack : MonoBehaviour
     {
         [Header("Attack Settings")]
-        [SerializeField] private float damage = 10f;
+        [SerializeField] private int damage = 10;
         [SerializeField] private float attackRadius = 0.25f;
         [SerializeField] private float attackCooldown = 1f;
         [SerializeField] private float indicatorDuration = 0.2f;

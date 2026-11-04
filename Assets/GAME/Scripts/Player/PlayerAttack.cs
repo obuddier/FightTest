@@ -6,7 +6,7 @@ namespace GAME.Scripts.Player
     public class PlayerAttack : MonoBehaviour
     {
         [Header("Attack Settings")]
-        [SerializeField] private float damage = 10f;
+        [SerializeField] private int damage = 10;
         [SerializeField] private float attackRadius = 0.25f;
         [SerializeField] private float attackCooldown = 0.5f;
         [SerializeField] private float indicatorDuration = 0.2f;
@@ -15,7 +15,6 @@ namespace GAME.Scripts.Player
         [Header("Object References")]
         [SerializeField] private GameObject attackIndicator;
 
-        // Our own hurtbox can fill one slot, so a single result could hide the opponent.
         private readonly Collider2D[] _hits = new Collider2D[2];
         private ContactFilter2D _targetFilter;
         private Coroutine _indicatorRoutine;
