@@ -5,14 +5,11 @@ namespace GAME.Scripts.Enemy
     [RequireComponent(typeof(EnemyHealth), typeof(EnemyMovement), typeof(EnemyAttack))]
     public class EnemyController : MonoBehaviour
     {
-        [SerializeField] private float attackInterval = 1f;
-        [SerializeField] private float flipInterval = 2f;
+        [SerializeField] private float attackRange = 1.5f;
+        [SerializeField] private Transform player;
 
         private EnemyMovement _movement;
         private EnemyAttack _attack;
-
-        private float _attackTimer;
-        private float _flipTimer;
 
         private void Awake()
         {
@@ -22,34 +19,20 @@ namespace GAME.Scripts.Enemy
 
         private void Update()
         {
-            AttackTimer();
-            FlipTimer();
-        }
+            // The player object is destroyed on death.
+            if (player == null) return;
 
-        private void AttackTimer()
-        {
-            if (_attackTimer < attackInterval)
-            {
-                _attackTimer += Time.deltaTime;
-            }
-            else
+            _movement.FaceTowards(player.position);
+
+            if (IsPlayerInRange())
             {
                 _attack.Attack();
-                _attackTimer = 0f;
             }
         }
 
-        private void FlipTimer()
+        private bool IsPlayerInRange()
         {
-            if (_flipTimer < flipInterval)
-            {
-                _flipTimer += Time.deltaTime;
-            }
-            else
-            {
-                _movement.Flip();
-                _flipTimer = 0f;
-            }
+            return Vector2.Distance(transform.position, player.position) <= attackRange;
         }
     }
 }
